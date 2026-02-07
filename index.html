@@ -166,7 +166,7 @@
     >
     </iframe>
 
-    <button id="musicBtn">🔊</button>
+    
 
     <div class="card">
       <div class="photo-frame">
@@ -231,32 +231,7 @@
         seconds.innerText = Math.floor((diff / 1000) % 60);
       }, 1000);
 
-      /* Sonido al primer toque */
-      const btn = document.getElementById("musicBtn");
-      let soundOn = false;
-
-      document.addEventListener(
-        "click",
-        () => {
-          if (!soundOn) {
-            document.getElementById("ytPlayer").src =
-              "https://www.youtube.com/embed/wZ75xnsJYT4?autoplay=1&mute=0&loop=1&playlist=wZ75xnsJYT4";
-            btn.innerText = "⏸️";
-            soundOn = true;
-          }
-        },
-        { once: true }
-      );
-
-      btn.addEventListener("click", () => {
-        const iframe = document.getElementById("ytPlayer");
-        if (!soundOn) return;
-        const playing = iframe.src.includes("autoplay=1&mute=0");
-        iframe.src = playing
-          ? "https://www.youtube.com/embed/wZ75xnsJYT4?autoplay=1&mute=1&loop=1&playlist=wZ75xnsJYT4"
-          : "https://www.youtube.com/embed/wZ75xnsJYT4?autoplay=1&mute=0&loop=1&playlist=wZ75xnsJYT4";
-        btn.innerText = playing ? "▶️" : "⏸️";
-      });
+     
     </script>
   </body>
 </html>
