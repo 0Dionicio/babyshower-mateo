@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Baby Shower Mateo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Allura&family=Montserrat:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        background: #f3f5f8;
+        font-family: "Montserrat", sans-serif;
+        color: #5f6f7f;
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(25px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .card {
+        max-width: 420px;
+        margin: 30px auto;
+        background: #e9edf1;
+        padding: 30px 25px 40px;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        animation: fadeUp 1s ease forwards;
+      }
+
+      /* ECOGRAFÍA */
+      .photo-frame {
+        background: #d8e0e7;
+        padding: 12px;
+        margin: 0 auto 20px;
+        width: 80%;
+        transform: rotate(-4deg);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        animation: fadeUp 1.2s ease forwards;
+      }
+
+      .photo-frame img {
+        width: 100%;
+        display: block;
+        border-radius: 3px;
+      }
+
+      .welcome {
+        letter-spacing: 3px;
+        font-size: 14px;
+        color: #709ab3;
+        animation: fadeUp 1.4s ease forwards;
+      }
+
+      .name {
+        font-family: "Playfair Display", serif;
+        font-size: 52px;
+        color: #6b7f92;
+        margin: 5px 0;
+        animation: fadeUp 1.6s ease forwards;
+      }
+
+      .subtitle {
+        font-family: "Allura", cursive;
+        font-size: 34px;
+        color: #8fa7bb;
+        margin-bottom: 10px;
+        animation: fadeUp 1.8s ease forwards;
+      }
+
+      .invite-text {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #6b7f92;
+        margin: 0 10px 20px;
+        animation: fadeUp 2s ease forwards;
+      }
+
+      /* CUENTA REGRESIVA */
+      .countdown {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0 30px;
+        animation: fadeUp 2.2s ease forwards;
+      }
+
+      .time-box {
+        background: #f3f5f8;
+        padding: 10px;
+        border-radius: 12px;
+        width: 22%;
+      }
+
+      .time-box span {
+        display: block;
+        font-size: 22px;
+        font-weight: 600;
+        color: #709ab3;
+      }
+
+      .time-box small {
+        font-size: 12px;
+        color: #6b7f92;
+      }
+
+      .details {
+        display: flex;
+        justify-content: space-between;
+        margin: 25px 0;
+        font-size: 14px;
+        animation: fadeUp 2.4s ease forwards;
+      }
+
+      .details div {
+        width: 30%;
+      }
+
+      .details strong {
+        display: block;
+        font-size: 18px;
+        color: #6b7f92;
+      }
+
+      .buttons {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        animation: fadeUp 2.6s ease forwards;
+      }
+
+      .btn {
+        text-decoration: none;
+        padding: 12px;
+        border-radius: 30px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+      }
+
+      .btn-whatsapp {
+        background: #9aafc2;
+        color: white;
+      }
+
+      .btn-whatsapp:hover {
+        background: #8fa7bb;
+        transform: scale(1.03);
+      }
+
+      .btn-maps {
+        border: 1px solid #9aafc2;
+        color: #5f6f7f;
+      }
+
+      .btn-maps:hover {
+        background: #cad5df;
+      }
+
+      footer {
+        margin-top: 25px;
+        font-size: 12px;
+        color: #7b8fa3;
+        animation: fadeUp 2.8s ease forwards;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <!-- ECOGRAFÍA ACTUALIZADA -->
+      <div class="photo-frame">
+        <img
+          src="https://uploads.codesandbox.io/uploads/user/user_F7oqix4vLS4qeCG4cS4jnQ/DVhY-WhatsApp+Image+2026-02-06+at+5.54.48+PM.jpeg"
+          alt="Ecografía de Mateo"
+        />
+      </div>
+
+      <div class="welcome">¡BIENVENIDO!</div>
+      <div class="name">MATEO</div>
+      <div class="subtitle">baby shower</div>
+
+      <p class="invite-text">
+        Acompáñanos a celebrar con mucho amor y alegría la dulce espera y la
+        llegada de nuestro bebé Mateo.
+      </p>
+
+      <div class="countdown">
+        <div class="time-box"><span id="days">0</span><small>Días</small></div>
+        <div class="time-box">
+          <span id="hours">0</span><small>Horas</small>
+        </div>
+        <div class="time-box">
+          <span id="minutes">0</span><small>Min</small>
+        </div>
+        <div class="time-box">
+          <span id="seconds">0</span><small>Seg</small>
+        </div>
+      </div>
+
+      <div class="details">
+        <div><strong>01/03</strong>2026</div>
+        <div>
+          <strong>Dirección</strong>Calle cualquiera 123<br />Cualquier lugar
+        </div>
+        <div><strong>03:00</strong>P.M.</div>
+      </div>
+
+      <div class="buttons">
+        <a
+          class="btn btn-whatsapp"
+          href="https://wa.me/522441151550?text=Hola,%20confirmo%20mi%20asistencia%20al%20baby%20shower%20de%20Mateo%20💙"
+          target="_blank"
+        >
+          Confirmar asistencia por WhatsApp
+        </a>
+
+        <a
+          class="btn btn-maps"
+          href="https://maps.app.goo.gl/n86j8rqYwnx4pyPQ9"
+          target="_blank"
+        >
+          Ver ubicación
+        </a>
+      </div>
+
+      <footer>Te esperamos con mucho cariño 💙</footer>
+    </div>
+
+    <script>
+      const eventDate = new Date("March 1, 2026 00:00:00").getTime();
+
+      setInterval(() => {
+        const now = new Date().getTime();
+        const diff = eventDate - now;
+
+        document.getElementById("days").innerText = Math.floor(
+          diff / (1000 * 60 * 60 * 24)
+        );
+        document.getElementById("hours").innerText = Math.floor(
+          (diff / (1000 * 60 * 60)) % 24
+        );
+        document.getElementById("minutes").innerText = Math.floor(
+          (diff / (1000 * 60)) % 60
+        );
+        document.getElementById("seconds").innerText = Math.floor(
+          (diff / 1000) % 60
+        );
+      }, 1000);
+    </script>
+  </body>
+</html>
